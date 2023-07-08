@@ -1,0 +1,28 @@
+header {
+  height: 60vh;
+}
+header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 150px;
+}
+header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header .navbar__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 2.5rem;
+}
+header .navbar__menu--link {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}

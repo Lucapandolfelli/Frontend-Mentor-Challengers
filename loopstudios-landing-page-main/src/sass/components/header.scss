@@ -1,0 +1,26 @@
+@use '../abstracts/mixins.scss' as *;
+@use '../abstracts/colours.scss' as *;
+
+header{
+    height: 60vh;
+
+    .navbar{
+        @include flexBox(center, center, row);
+        height: 150px;
+
+        .container{
+            @include flexBox(space-between, center, row);
+        }
+
+        &__menu{
+            @include flexBox(center, center, row);
+            list-style: none;
+            gap: 2.5rem;
+
+            &--link{
+                color: $clr--primary--100;
+                text-decoration: none;
+            }
+        }
+    }
+}
