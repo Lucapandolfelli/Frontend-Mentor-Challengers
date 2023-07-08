@@ -82,8 +82,11 @@ header {
   gap: 3rem;
 }
 
-.cart-btn {
+.cart > div:first-child {
   position: relative;
+}
+
+.cart-btn {
   cursor: pointer;
   background: none;
   border: none;
@@ -97,7 +100,7 @@ header {
 .cart-label {
   position: absolute;
   display: none;
-  top: .5rem;
+  top: -.25rem;
   left: .5rem;
   background-color: var(--clr-primary-300);
   color: var(--clr-primary-100);
@@ -558,6 +561,17 @@ main {
   }
   .navbar {
     display: none;
+  }
+  .cart {
+    position: static;
+  }
+  .cart-dropdown {
+    top: calc(80px + 1rem);
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+    right: 0;
+    left: 0;
+    z-index: 2;
   }
   main {
     grid-template-columns: 1fr;
