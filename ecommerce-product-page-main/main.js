@@ -1,3 +1,19 @@
+const openMenuBtn = document.getElementById("open-menu");
+const closeMenuBtn = document.getElementById("close-menu");
+const navbar = document.getElementById("navbar");
+
+openMenuBtn.addEventListener("click", () => {
+  navbar.classList.add("toggle");
+  openMenuBtn.style.display = "none";
+  closeMenuBtn.style.display = "block";
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  navbar.classList.remove("toggle");
+  closeMenuBtn.style.display = "none";
+  openMenuBtn.style.display = "block";
+});
+
 const cartButton = document.getElementById("cart-btn");
 const cartDropdown = document.getElementById("cart-dropdown");
 

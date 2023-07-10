@@ -37,8 +37,18 @@ header {
 }
 
 .menu-button {
-  fill: var(--clr-neutral-500);
   display: none;
+  border: none;
+  background: none;
+  height: fit-content;
+}
+
+.menu-button svg {
+  fill: var(--clr-neutral-500);
+}
+
+.menu-button svg:hover {
+  fill: var(--clr-neutral-700);
 }
 
 .menu-button:hover {
@@ -230,12 +240,12 @@ main {
 /*** IMAGES ***/
 
 .product-image {
+  position: relative;
   width: 100%;
   padding: 1rem;
 }
 
 .main-image {
-  position: relative;
   aspect-ratio: 1;
   border-radius: 1rem;
   overflow: hidden;
@@ -552,15 +562,38 @@ main {
 @media (max-width: 900px) {
   header {
     height: 80px;
+    position: relative;
   }
   .cart {
     gap: 1.5rem;
   }
-  .menu-button {
+  #open-menu {
     display: block;
   }
   .navbar {
     display: none;
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    padding: calc(80px + 2rem) 0 0 1.5rem;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: var(--clr-neutral-100);
+    z-index: 999;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.75);
+  }
+  .nav-item {
+    height: fit-content;
+    color: var(--clr-neutral-700);
+    font-weight: var(--fw-semibold);
+    font-size: 1.125rem;
+  }
+  .toggle {
+    display: flex;
+  }
+  .menu-button {
+    z-index: 1000;
   }
   .cart {
     position: static;
